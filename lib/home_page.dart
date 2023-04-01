@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:healthapp/widgets/health_needs.dart';
 import 'package:healthapp/widgets/nearby_doctors.dart';
@@ -5,9 +6,14 @@ import 'package:healthapp/widgets/upcoming_cards.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:flutter/src/material/bottom_navigation_bar.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,28 +63,21 @@ class HomePage extends StatelessWidget {
             style: Theme.of(context).textTheme.headline6,
           ),
           const SizedBox(height: 15),
-          NearbyDoctors(),
+          const NearbyDoctors(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 0,
         type: BottomNavigationBarType.fixed,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        items: const <BottomNavigationBarItem>[
+        items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined),
-            label: 'Home',
-          ),
+              icon: Icon(CupertinoIcons.home), label: "Home"),
           BottomNavigationBarItem(
-            icon: Icon(Icons.calendar_month_outlined),
-            label: 'Calender',
-          ),
+              icon: Icon(CupertinoIcons.chat_bubble_2), label: "Messages"),
           BottomNavigationBarItem(
-            icon: Icon(Icons.chat_bubble_outline),
-            label: 'Chats',
-          ),
+              icon: Icon(CupertinoIcons.book), label: "Discover"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.person_outline), label: 'Profile'),
+              icon: Icon(CupertinoIcons.person), label: "Profile"),
         ],
       ),
     );

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:healthapp/home_page.dart';
+import 'package:healthapp/login_page.dart';
 import 'package:healthapp/profile_page.dart';
 
 void main() {
@@ -22,7 +23,9 @@ class MyApp extends StatelessWidget {
             GoogleFonts.plusJakartaSansTextTheme(Theme.of(context).textTheme),
         useMaterial3: true,
       ),
-      home: const ProfilePage(),
+      // home: const HomePage(),
+      // home: const ProfilePage(),
+      home: const LoginPage(),
     );
   }
 }
