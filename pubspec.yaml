@@ -36,7 +36,7 @@ flutter:
   fonts:
     - family: Montserrat
       fonts: 
-        - asset: assets/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf
+        - asset: assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf
  
 
 

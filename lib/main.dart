@@ -1,16 +1,16 @@
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:healthapp/login_page.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:device_preview/device_preview.dart';
+// import 'package:device_preview/device_preview.dart';
+import 'package:healthapp/signup_page.dart';
 
-void main() => runApp(
-      DevicePreview(
-        enabled: true,
-        builder: (context) => const MyApp(),
-      ),
-    );
+void main() => runApp(const MyApp());
+//   DevicePreview(
+//     enabled: true,
+//     builder: (context) => const MyApp(),
+//   ),
+// );
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(414, 1033),
+      designSize: const Size(1290, 2796),
       // minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
@@ -35,7 +35,8 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: const LoginPage(),
+      // child: const LoginPage(),
+      child: const SignupPage(),
     );
   }
 }
