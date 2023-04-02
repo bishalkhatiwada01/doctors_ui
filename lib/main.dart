@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:healthapp/home_page.dart';
 import 'package:healthapp/login_page.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 // import 'package:device_preview/device_preview.dart';
 import 'package:healthapp/signup_page.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(MyApp());
 //   DevicePreview(
 //     enabled: true,
 //     builder: (context) => const MyApp(),
@@ -35,8 +36,9 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      // child: const LoginPage(),
-      child: const SignupPage(),
+      // child: const HomePage(),
+      // child: const SignupPage(),
+      child: const LoginPage(),
     );
   }
 }

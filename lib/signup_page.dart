@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:healthapp/login_page.dart';
 
 class SignupPage extends StatefulWidget {
   const SignupPage({super.key});
@@ -98,7 +99,10 @@ class _SignupPageState extends State<SignupPage> {
               ),
               const SizedBox(height: 41),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => LoginPage()));
+                },
                 style: ButtonStyle(
                   minimumSize:
                       MaterialStateProperty.all<Size>(const Size(354.0, 52.0)),
@@ -144,9 +148,6 @@ class _SignupPageState extends State<SignupPage> {
                       style: TextStyle(
                         color: Colors.red,
                         fontSize: 15,
-                        fontFamily: 'Montserrat',
-                        fontWeight: FontWeight.bold,
-                        //font style montserrat rakhna aaina
                       ),
                     ),
                   ],
@@ -174,8 +175,7 @@ class _SignupPageState extends State<SignupPage> {
                       style: TextStyle(
                         color: Colors.blue,
                         fontSize: 15,
-                        fontFamily: 'Montserrat',
-                        fontWeight: FontWeight.bold,
+
                         //font style montserrat rakhna aaina
                       ),
                     ),
@@ -188,7 +188,10 @@ class _SignupPageState extends State<SignupPage> {
                 children: [
                   const Text('Already registered?'),
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => const SignupPage()));
+                      },
                       child: const Text(
                         "Login",
                         style: TextStyle(color: Colors.blue),

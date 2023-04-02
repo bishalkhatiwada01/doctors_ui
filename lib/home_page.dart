@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:healthapp/message_page.dart';
+import 'package:healthapp/profile_page.dart';
+import 'package:healthapp/search_page.dart';
 import 'package:healthapp/widgets/health_needs.dart';
 import 'package:healthapp/widgets/nearby_doctors.dart';
 import 'package:healthapp/widgets/upcoming_cards.dart';
@@ -14,6 +17,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  int _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,7 +71,10 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 0,
+        currentIndex: _currentIndex,
+        onTap: (int newIndex) => setState(() {
+          _currentIndex = newIndex;
+        }),
         type: BottomNavigationBarType.fixed,
         items: const [
           BottomNavigationBarItem(

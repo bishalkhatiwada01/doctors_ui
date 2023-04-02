@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:healthapp/home_page.dart';
+import 'package:healthapp/signup_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -63,7 +65,10 @@ class _LoginPageState extends State<LoginPage> {
               ]),
               const SizedBox(height: 24),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const HomePage()));
+                },
                 style: ButtonStyle(
                   minimumSize:
                       MaterialStateProperty.all<Size>(const Size(354.0, 52.0)),
@@ -114,11 +119,11 @@ class _LoginPageState extends State<LoginPage> {
                     const Text(
                       "Google",
                       style: TextStyle(
-                          color: Colors.red,
-                          fontSize: 15,
-                          fontFamily: 'Montserrat'
-                          //font style montserrat rakhna aaina
-                          ),
+                        color: Colors.red,
+                        fontSize: 15,
+
+                        //font style montserrat rakhna aaina
+                      ),
                     ),
                   ],
                 ),
@@ -141,9 +146,9 @@ class _LoginPageState extends State<LoginPage> {
                     const Text(
                       "Facebook",
                       style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 15,
-                          fontFamily: 'Montserrat'),
+                        color: Colors.blue,
+                        fontSize: 15,
+                      ),
                     ),
                   ],
                 ),
@@ -154,13 +159,18 @@ class _LoginPageState extends State<LoginPage> {
                 children: [
                   const Text(
                     'Dont have an acount?',
-                    style: TextStyle(fontFamily: 'Montserrat'),
                   ),
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => const SignupPage(),
+                        ));
+                      },
                       child: const Text(
                         'Signup',
-                        style: TextStyle(fontFamily: 'Montserrat'),
+                        style: TextStyle(
+                            fontFamily: 'Montserrat',
+                            fontWeight: FontWeight.bold),
                       ))
                 ],
               )
