@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -20,15 +18,17 @@ class _LoginPageState extends State<LoginPage> {
         children: [
           Column(
             children: [
-              const SizedBox(height: 0), //height 135 rakhda rmro dekhyena
+              const SizedBox(height: 135),
               Image.asset('assets/login.png'),
               const TextField(
-                obscureText: true,
                 decoration: InputDecoration(
                   hintText: 'Email',
+                  hintStyle: TextStyle(fontFamily: 'Montserrat'),
                   border: OutlineInputBorder(
                     borderSide: BorderSide(
-                        color: Color.fromRGBO(192, 192, 192, 1), width: 3),
+                      color: Color.fromRGBO(192, 192, 192, 1),
+                      width: 3,
+                    ),
                   ),
                 ),
               ),
@@ -37,6 +37,12 @@ class _LoginPageState extends State<LoginPage> {
                 obscureText: true,
                 decoration: InputDecoration(
                   hintText: 'Password',
+                  hintStyle: TextStyle(fontFamily: 'Montserrat'),
+                  suffixIcon: Align(
+                    widthFactor: 1.0,
+                    heightFactor: 1.0,
+                    child: Icon(Icons.remove_red_eye),
+                  ),
                   border: OutlineInputBorder(
                     borderSide: BorderSide(
                         color: Color.fromRGBO(192, 192, 192, 1), width: 3),
@@ -49,7 +55,10 @@ class _LoginPageState extends State<LoginPage> {
                     onPressed: () {},
                     child: const Text(
                       'Forgot Password?',
-                      style: TextStyle(fontSize: 15, color: Colors.black),
+                      style: TextStyle(
+                          fontSize: 15,
+                          color: Colors.black,
+                          fontFamily: 'Montserrat'),
                     )),
               ]),
               const SizedBox(height: 24),
@@ -68,14 +77,24 @@ class _LoginPageState extends State<LoginPage> {
               ),
               const SizedBox(height: 47),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Image.asset('assets/Vector 1.png'),
+                  Image.asset(
+                    'assets/Vector 1.png',
+                    width: 108,
+                  ),
                   const Text(
                     "Or Continue With",
                     style: TextStyle(
-                        fontSize: 15, color: Color.fromRGBO(192, 192, 192, 1)),
+                      fontSize: 15,
+                      color: Color.fromRGBO(192, 192, 192, 1),
+                      fontFamily: 'Roboto',
+                    ),
                   ),
-                  Image.asset('assets/Vector 1.png'),
+                  Image.asset(
+                    'assets/Vector 1.png',
+                    width: 108,
+                  ),
                 ],
               ),
               const SizedBox(height: 32),
@@ -90,11 +109,16 @@ class _LoginPageState extends State<LoginPage> {
                 child: Row(
                   // ignore: prefer_const_literals_to_create_immutables
                   children: [
-                    const Icon(FontAwesomeIcons.google),
+                    const Icon(FontAwesomeIcons.google, color: Colors.red),
                     const SizedBox(width: 101),
                     const Text(
                       "Google",
-                      style: TextStyle(color: Colors.red, fontSize: 15),
+                      style: TextStyle(
+                          color: Colors.red,
+                          fontSize: 15,
+                          fontFamily: 'Montserrat'
+                          //font style montserrat rakhna aaina
+                          ),
                     ),
                   ],
                 ),
@@ -116,7 +140,10 @@ class _LoginPageState extends State<LoginPage> {
                     const SizedBox(width: 101),
                     const Text(
                       "Facebook",
-                      style: TextStyle(color: Colors.blue, fontSize: 15),
+                      style: TextStyle(
+                          color: Colors.blue,
+                          fontSize: 15,
+                          fontFamily: 'Montserrat'),
                     ),
                   ],
                 ),
@@ -125,8 +152,16 @@ class _LoginPageState extends State<LoginPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text('Dont have an acount?'),
-                  TextButton(onPressed: () {}, child: const Text('Signup'))
+                  const Text(
+                    'Dont have an acount?',
+                    style: TextStyle(fontFamily: 'Montserrat'),
+                  ),
+                  TextButton(
+                      onPressed: () {},
+                      child: const Text(
+                        'Signup',
+                        style: TextStyle(fontFamily: 'Montserrat'),
+                      ))
                 ],
               )
             ],
