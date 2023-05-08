@@ -68,23 +68,6 @@ class _HomePageState extends State<HomePage> {
           const NearbyDoctors(),
         ],
       ),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   currentIndex: _currentIndex,
-      //   onTap: (int newIndex) => setState(() {
-      //     _currentIndex = newIndex;
-      //   }),
-      //   type: BottomNavigationBarType.fixed,
-      //   items: const [
-      //     BottomNavigationBarItem(
-      //         icon: Icon(CupertinoIcons.home), label: "Home"),
-      //     BottomNavigationBarItem(
-      //         icon: Icon(CupertinoIcons.chat_bubble_2), label: "Messages"),
-      //     BottomNavigationBarItem(
-      //         icon: Icon(CupertinoIcons.book), label: "Discover"),
-      //     BottomNavigationBarItem(
-      //         icon: Icon(CupertinoIcons.person), label: "Profile"),
-      //   ],
-      // ),
     );
   }
 }

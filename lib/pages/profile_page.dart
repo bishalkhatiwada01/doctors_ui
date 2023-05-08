@@ -134,20 +134,6 @@ class ProfilePage extends StatelessWidget {
                   ),
                 ))
       ])),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 3,
-        type: BottomNavigationBarType.fixed,
-        items: const [
-          BottomNavigationBarItem(
-              icon: Icon(CupertinoIcons.home), label: "Home"),
-          BottomNavigationBarItem(
-              icon: Icon(CupertinoIcons.chat_bubble_2), label: "Messages"),
-          BottomNavigationBarItem(
-              icon: Icon(CupertinoIcons.book), label: "Discover"),
-          BottomNavigationBarItem(
-              icon: Icon(CupertinoIcons.person), label: "Profile"),
-        ],
-      ),
     );
   }
 }

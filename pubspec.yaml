@@ -33,10 +33,5 @@ flutter:
     - assets/
   
 
-  fonts:
-    - family: Montserrat
-      fonts: 
-        - asset: assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf
- 
-
+  
 
